@@ -1,0 +1,8 @@
+C:\Users\Adrian\Documents\Visual Studio 2013\Projects\Data\Business\bin\Debug\Output.txt
+C:\Users\Adrian\Documents\Visual Studio 2013\Projects\Data\Business\bin\Debug\Business.dll
+C:\Users\Adrian\Documents\Visual Studio 2013\Projects\Data\Business\bin\Debug\Business.pdb
+C:\Users\Adrian\Documents\Visual Studio 2013\Projects\Data\Business\bin\Debug\Data.dll
+C:\Users\Adrian\Documents\Visual Studio 2013\Projects\Data\Business\bin\Debug\Data.pdb
+C:\Users\Adrian\Documents\Visual Studio 2013\Projects\Data\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+C:\Users\Adrian\Documents\Visual Studio 2013\Projects\Data\Business\obj\Debug\Business.dll
+C:\Users\Adrian\Documents\Visual Studio 2013\Projects\Data\Business\obj\Debug\Business.pdb

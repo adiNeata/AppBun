@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PortalMSPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Atendees">
+    <Key>
+      <PropertyRef Name="LabId" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LabId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Audits">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IP" Type="nvarchar" MaxLength="20" />
+    <Property Name="Data" Type="datetime" Nullable="false" />
+    <Property Name="Action" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Configurations">
+    <Key>
+      <PropertyRef Name="KeyName" />
+    </Key>
+    <Property Name="KeyName" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="KeyValue" Type="varchar" MaxLength="1000" />
+    <Property Name="KeyComment" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="DreamsparkStudents">
+    <Key>
+      <PropertyRef Name="CNP" />
+    </Key>
+    <Property Name="CNP" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Nume" Type="nvarchar" MaxLength="40" />
+    <Property Name="Prenume" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Labs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Location" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="StatusId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TitularId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NrLocuri" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Members">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="Year" Type="int" />
+    <Property Name="University" Type="nvarchar(max)" />
+    <Property Name="Faculty" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Team_Id" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Posts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Body" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedByUserId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModifiedByUserId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="PostCategoryId" Type="int" Nullable="false" />
+    <Property Name="ShowFullPost" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="CNP" />
+    </Key>
+    <Property Name="CNP" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nume" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prenume" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Facultate" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
+    <Property Name="AnStudiu" Type="int" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailO365" Type="nvarchar" MaxLength="50" />
+    <Property Name="CodMatricol" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Teams">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="SoftwareDevelopment" Type="bit" Nullable="false" />
+    <Property Name="Windows8" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nume" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prenume" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Faculty" Type="int" Nullable="false" />
+    <Property Name="StudyType" Type="int" Nullable="false" />
+    <Property Name="AcSection" Type="int" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Punctaj" Type="int" />
+    <Property Name="Cnp" Type="nvarchar" MaxLength="13" />
+    <Property Name="HasDreamSpark" Type="bit" Nullable="false" />
+    <Property Name="DreamsparkRole" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_dbo_Atendees_dbo_Labs_LabId">
+    <End Role="Labs" Type="Self.Labs" Multiplicity="1" />
+    <End Role="Atendees" Type="Self.Atendees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Labs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Atendees">
+        <PropertyRef Name="LabId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Atendees_dbo_Users_UserId">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Atendees" Type="Self.Atendees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Atendees">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Labs_dbo_Categories_CategoryId">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Labs" Type="Self.Labs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Labs">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Labs_dbo_Status_StatusId">
+    <End Role="Status" Type="Self.Status" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Labs" Type="Self.Labs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Labs">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Labs_dbo_Users_TitularId">
+    <End Role="Users" Type="Self.Users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Labs" Type="Self.Labs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Labs">
+        <PropertyRef Name="TitularId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Posts_dbo_Users_ModifiedByUserId">
+    <End Role="Users" Type="Self.Users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Posts" Type="Self.Posts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Posts">
+        <PropertyRef Name="ModifiedByUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Users_dbo_Roles_RoleId">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_Teams">
+    <End Role="Teams" Type="Self.Teams" Multiplicity="0..1" />
+    <End Role="Members" Type="Self.Members" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teams">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Members">
+        <PropertyRef Name="Team_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PortalMSPModelStoreContainer">
+    <EntitySet Name="Atendees" EntityType="Self.Atendees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Audits" EntityType="Self.Audits" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Configurations" EntityType="Self.Configurations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DreamsparkStudents" EntityType="Self.DreamsparkStudents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Labs" EntityType="Self.Labs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Members" EntityType="Self.Members" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Posts" EntityType="Self.Posts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teams" EntityType="Self.Teams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_dbo_Atendees_dbo_Labs_LabId" Association="Self.FK_dbo_Atendees_dbo_Labs_LabId">
+      <End Role="Labs" EntitySet="Labs" />
+      <End Role="Atendees" EntitySet="Atendees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Atendees_dbo_Users_UserId" Association="Self.FK_dbo_Atendees_dbo_Users_UserId">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Atendees" EntitySet="Atendees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Labs_dbo_Categories_CategoryId" Association="Self.FK_dbo_Labs_dbo_Categories_CategoryId">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Labs" EntitySet="Labs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Labs_dbo_Status_StatusId" Association="Self.FK_dbo_Labs_dbo_Status_StatusId">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Labs" EntitySet="Labs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Labs_dbo_Users_TitularId" Association="Self.FK_dbo_Labs_dbo_Users_TitularId">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Labs" EntitySet="Labs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Posts_dbo_Users_ModifiedByUserId" Association="Self.FK_dbo_Posts_dbo_Users_ModifiedByUserId">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Posts" EntitySet="Posts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Users_dbo_Roles_RoleId" Association="Self.FK_dbo_Users_dbo_Roles_RoleId">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_Teams" Association="Self.FK_Members_Teams">
+      <End Role="Teams" EntitySet="Teams" />
+      <End Role="Members" EntitySet="Members" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
