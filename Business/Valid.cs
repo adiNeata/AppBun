@@ -8,7 +8,7 @@ namespace Business
 {
     public class Valid
     {
-		public static bool ValidUsers(string check)
+		public bool ValidString(string check)
 		{
 			if((check.Equals("")) || (check.Equals(null)))
 			{
@@ -16,7 +16,7 @@ namespace Business
 			}
 			else
 			{
-				return check.All(Char.IsLetter);
+				return check.All(Char.IsLetter) || check.All(Char.IsDigit);
 			}
 		}
     }

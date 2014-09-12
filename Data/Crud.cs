@@ -28,7 +28,7 @@ namespace Data
 			CreateConnectionAndProcessQuery(query);
 		}
 
-		internal static void Display(DataSet arg)
+		internal void Display(DataSet arg)
 		{
 			foreach (DataRow dataRow in arg.Tables[0].Rows)
 			{
@@ -41,15 +41,17 @@ namespace Data
 			}
 		}
 
-		internal static void DisplayTextForm(DataSet arg)
+		internal void DisplayTextForm(DataSet arg)
 		{
-			using (StreamWriter file = new StreamWriter("C:\\Users\\Adrian\\Documents\\Visual Studio 2013\\Projects\\Data\\Data\\Output.txt"))
+			string path = Path.Combine(Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), "Output.txt");
+			using (StreamWriter file = new StreamWriter(path))
 			{
 				foreach (DataRow dataRow in arg.Tables[0].Rows)
 				{
 					foreach (DataColumn dataColumn in arg.Tables[0].Columns)
 					{
-						file.WriteLine(dataRow[dataColumn.ColumnName] + ", ");
+						var aux = dataRow[dataColumn.ColumnName];
+						file.WriteLine(aux);
 					}
 
 					file.WriteLine();
@@ -70,7 +72,7 @@ namespace Data
 			}
 		}
 
-		public static IList<string> ListTables()
+		public IList<string> ListTables()
 		{
 			using (SqlConnection conn = new SqlConnection(Data.Properties.Settings.Default.PortalMSPConnectionString1))
 			{
@@ -84,6 +86,26 @@ namespace Data
 				}
 
 				return tables;
+			}
+		}
+
+		public IList<string> ListFields(string table)
+		{
+			Crud crud = new Crud();
+			string query = "SELECT * FROM " + table;
+			DataSet arg = CreateConnectionAndProcessQuery(query);
+
+			using (SqlConnection conn = new SqlConnection(Data.Properties.Settings.Default.PortalMSPConnectionString1))
+			{
+				conn.Open();
+				List<string> fields = new List<string>();
+
+				foreach (var item in arg.Tables[0].Columns)
+				{
+					fields.Add(item.ToString());
+				}
+
+				return fields;
 			}
 		}
 	}

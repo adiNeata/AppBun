@@ -21,17 +21,21 @@ namespace Presentation
 
 		private void retrieveButton_Click(object sender, EventArgs e)
 		{
-			LinkToData.DisplayContents((string)tableComboBox.SelectedItem);
+			LinkToData link = new LinkToData();
+			link.DisplayContents((string)tableComboBox.SelectedItem);
 		}
 
 		private void addButton_Click(object sender, EventArgs e)
 		{
-			LinkToData.PassString(fieldInputTextBox.Text);
+			LinkToData link = new LinkToData();
+			link.PassString(fieldInputTextBox.Text);
 		}
 
 		private void InitializeComboBox()
 		{
-			foreach (string item in LinkToData.PassTables())
+			LinkToData link = new LinkToData();
+
+			foreach (string item in link.PassTables())
 			{
 				this.tableComboBox.Items.Add(item.ToString());
 			}

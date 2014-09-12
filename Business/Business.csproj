@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LinkToData.cs" />
+    <Compile Include="StringProcessing.cs" />
     <Compile Include="Valid.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

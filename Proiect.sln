@@ -9,27 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{4C99315E-2F4D-49AB-846B-5AD310A6DF41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentation\Presentation.csproj", "{3E20F7B1-8455-43DB-B8E2-FE7EE4DD75E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationWPF", "PresentationWPF\PresentationWPF.csproj", "{176289EF-54C7-42AD-B732-E30E99B270D4}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://adineata.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Business\\Business.csproj
-		SccProjectName1 = Business
-		SccLocalPath1 = Business
-		SccProjectUniqueName2 = Data\\Data.csproj
-		SccProjectName2 = Data
-		SccLocalPath2 = Data
-		SccProjectUniqueName3 = Presentation\\Presentation.csproj
-		SccProjectName3 = Presentation
-		SccLocalPath3 = Presentation
-		SccProjectUniqueName4 = Test\\Test.csproj
-		SccProjectName4 = Test
-		SccLocalPath4 = Test
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -47,10 +29,10 @@ Global
 		{4C99315E-2F4D-49AB-846B-5AD310A6DF41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C99315E-2F4D-49AB-846B-5AD310A6DF41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C99315E-2F4D-49AB-846B-5AD310A6DF41}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3E20F7B1-8455-43DB-B8E2-FE7EE4DD75E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3E20F7B1-8455-43DB-B8E2-FE7EE4DD75E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3E20F7B1-8455-43DB-B8E2-FE7EE4DD75E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3E20F7B1-8455-43DB-B8E2-FE7EE4DD75E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{176289EF-54C7-42AD-B732-E30E99B270D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{176289EF-54C7-42AD-B732-E30E99B270D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{176289EF-54C7-42AD-B732-E30E99B270D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{176289EF-54C7-42AD-B732-E30E99B270D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
