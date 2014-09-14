@@ -6,3 +6,11 @@ C:\Users\Adrian\Documents\Visual Studio 2013\Projects\Data\Business\bin\Debug\Da
 C:\Users\Adrian\Documents\Visual Studio 2013\Projects\Data\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
 C:\Users\Adrian\Documents\Visual Studio 2013\Projects\Data\Business\obj\Debug\Business.dll
 C:\Users\Adrian\Documents\Visual Studio 2013\Projects\Data\Business\obj\Debug\Business.pdb
+F:\svn\adi\branches\Sideway\Business\bin\Debug\Output.txt
+F:\svn\adi\branches\Sideway\Business\bin\Debug\Business.dll
+F:\svn\adi\branches\Sideway\Business\bin\Debug\Business.pdb
+F:\svn\adi\branches\Sideway\Business\bin\Debug\Data.dll
+F:\svn\adi\branches\Sideway\Business\bin\Debug\Data.pdb
+F:\svn\adi\branches\Sideway\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+F:\svn\adi\branches\Sideway\Business\obj\Debug\Business.dll
+F:\svn\adi\branches\Sideway\Business\obj\Debug\Business.pdb

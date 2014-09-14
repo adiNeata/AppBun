@@ -9,3 +9,14 @@ C:\Users\Adrian\Documents\Visual Studio 2013\Projects\Data\Data\bin\Debug\Entity
 C:\Users\Adrian\Documents\Visual Studio 2013\Projects\Data\Data\bin\Debug\EntityFramework.xml
 C:\Users\Adrian\Documents\Visual Studio 2013\Projects\Data\Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Adrian\Documents\Visual Studio 2013\Projects\Data\Data\bin\Debug\Output.txt
+F:\svn\adi\branches\Sideway\Data\bin\Debug\Output.txt
+F:\svn\adi\branches\Sideway\Data\bin\Debug\Data.dll.config
+F:\svn\adi\branches\Sideway\Data\bin\Debug\Data.dll
+F:\svn\adi\branches\Sideway\Data\bin\Debug\Data.pdb
+F:\svn\adi\branches\Sideway\Data\bin\Debug\EntityFramework.dll
+F:\svn\adi\branches\Sideway\Data\bin\Debug\EntityFramework.SqlServer.dll
+F:\svn\adi\branches\Sideway\Data\bin\Debug\EntityFramework.xml
+F:\svn\adi\branches\Sideway\Data\bin\Debug\EntityFramework.SqlServer.xml
+F:\svn\adi\branches\Sideway\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+F:\svn\adi\branches\Sideway\Data\obj\Debug\Data.dll
+F:\svn\adi\branches\Sideway\Data\obj\Debug\Data.pdb

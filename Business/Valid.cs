@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Business
 {
+    //extension methods? cauta pe net
+    // pentu prima veriticare, exista string.IsNullOrEmpty() sau stirng.IsNullOrWhitespace()
+    // aici verifici mai exact ce? iti trebuie un naming mai bun. ce inseamna Valid?
     public class Valid
     {
 		public bool ValidString(string check)

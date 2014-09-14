@@ -8,9 +8,16 @@ using System.Windows.Forms;
 
 namespace Business
 {
+    //naming mai bun, eventual comentarii pe metode. daca pui /// (de slashuri) inainte  de o metoda
+    //iti va aparea ceva similar ca la "PassInsertingArgs". In momentl in care iti vei folosi propriile librarii
+    //comentariile astea iti vor aparea la intellisense
 	public class LinkToData
 	{
 		private Valid valid = new Valid();
+        /// <summary>
+        /// Descrii metoda aici.
+        /// </summary>
+        /// <param name="passed">Ce insemana parametrul asta?</param>
 		public void PassInsertingArgs(string []passed)
 		{
 			bool trueStrings = true;

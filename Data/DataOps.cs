@@ -45,6 +45,9 @@ namespace Data
 
 		public void UpdateRow(string table, string fieldToReplace, string valueReplaced, string fieldToSearch, char op, string valueTolookfor)
 		{
+            //aici poti folosi parametrii. nu stiu cat de mult te ajuta stringprocessing-ul tau 
+            //pentru sql injection
+            //tema: incearca sa faci sql injection in aplicatia ta, inainte sa schimbi ceva
 			string query = string.Format("UPDATE {0} SET {1} = '{2}' WHERE {3} {4} '{5}'",
 										table, fieldToReplace, valueReplaced, fieldToSearch, valueTolookfor);
 			crud.Update(query);
